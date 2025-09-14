@@ -5,6 +5,11 @@ import { Layout } from "../components/Layout"
 const Register=()=>{
 //vamos hacer la parte Logica , tenemos que hacer un registro que contega nombre, email y contraseña
 //vamos hacer estados :le avisan al comp que va haber una modificacion
+// react tiene por defecto un re-render que lo hace cada vez , que hay un cambio en el esatdo o en las props de los comp,
+//impoprtante solo se renderiza el comp que fue modificado por algun estado , no la pag web entera por eso el usuario no lo nota , si fuese toda la pag , lo notaria 
+//asi que es es invisible , aparte como tenemos el evento onchange cada vez que hagamos un cambio en el estado de username que lo tiene el input usetrname /nombre
+//se va ejecutar esta funcion del evento , pero eso es cada vez , ocea escribo mi nombre "tamara" y va a ahber un re-render 6 veces  , porque esa son las veces que hubo un cambio en ese input 
+//pasa lo mismo con los otros estados.
 const [username,setusername]=useState("");
 const [email,setemail]=useState("");
 const [password,setpassword]=useState("");
